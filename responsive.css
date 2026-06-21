@@ -1,0 +1,16 @@
+@media (min-width: 769px) {
+  .hide_on_desktop {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .hide_on_mobile {
+    display: none;
+  }
+  header {
+    width: 95%;
+    justify-content: space-between;
+    padding: 6px;
+    padding-left: 10px;
+  }
+}

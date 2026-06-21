@@ -1,0 +1,210 @@
+.toolkit_section {
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.toolkit_wrapper {
+  /* background-color: #012441; */
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: 32px;
+  padding: 3rem;
+  box-shadow: 0 4px 30px #035eaf;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+}
+
+/* Left Side: Header & Tech Stack Grid */
+.toolkit_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.toolkit_title {
+  font-size: 2.75rem;
+  font-weight: 500;
+  color: #e0f4ff;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.toolkit_subtitle {
+  color: #3278c6;
+}
+
+.stack_label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #e0f4ff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.icon_grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  max-width: 500px;
+}
+
+/* Squircle Icon Tiles */
+.icon_tile {
+  aspect-ratio: 1 / 1;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.icon_tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.icon_tile svg,
+.icon_tile img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+/* Premium Styling for Text-based platforms */
+.icon_tile.gtm_style {
+  background-color: #f8fafc;
+  color: #2563eb;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+.icon_tile.ga4_style {
+  background-color: #fff7ed;
+  color: #ea580c;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+.icon_tile.capi_style {
+  background-color: #f0fdf4;
+  color: #16a34a;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+.icon_tile.liquid_style {
+  background-color: #faf5ff;
+  color: #9333ea;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+/* Right Side: Disciplines List */
+.toolkit_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.skill_item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  cursor: pointer;
+}
+
+.skill_circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #3278c6;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+  flex-shrink: 0;
+}
+
+.skill_circle svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.skill_text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #e0f4ff;
+  transition: color 0.2s ease;
+}
+
+/* Hover States */
+.skill_item:hover .skill_circle {
+  transform: scale(1.08);
+  box-shadow: 0 4px 30px #035eaf;
+}
+
+.skill_item:hover .skill_text {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .toolkit_section {
+    padding: 0;
+  }
+  .toolkit_wrapper {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.5rem;
+    gap: 3rem;
+  }
+  .toolkit_title {
+    font-size: 2.25rem;
+  }
+  .stack_label {
+    margin-top: 2.5rem;
+  }
+  .icon_grid {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 100%;
+  }
+  .toolkit_right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    justify-content: space-evenly;
+    gap: 2rem 3rem;
+  }
+  .skill_item {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  span.skill_text {
+    max-width: 117px;
+    font-size: 14px;
+    font-weight: normal;
+    display: block;
+    text-align: center;
+  }
+}
